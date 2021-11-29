@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #a9e3fc;
+  font-family: Pacifico;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#headTitle {
+  display: flex;
+  align-items: center;
+  margin: 0 0 30vh;
+  position: absolute;
+  font-size: 100px;
+  transition: all 2s ease;
+}
+
+#addBook,
+#currentLibrary,
+#submitButton,
+#close {
+  background-color: #064965;
+  border: 0; /* removes the little gray border around button */
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); /* offset-x | offset-y | blur-radius | spread-radius | color */
+  color: #fff;
+  font-family: Pacifico;
+  font-size: 18px;
+  padding: 10px 25px;
+  margin: 10px;
+  transition: all 2s ease;
+}
+
+.modal-container {
+  /* display: none;*/ /* this displays the content or not */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100vh; /* covers the vertical line box */
+  width: 100vw; /* covers the horizontal line box */
+  opacity: 0; /* it becomes hidden. With JS we make it modular. */
+  pointer-events: none; /* it allows to click a button */
+  transition: opacity 2s ease;
+}
+
+.modal-container.show {
+  /* opens the form, which is a default */
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  background-color: white;
+  width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); /* offset-x | offset-y | blur-radius | spread-radius | color */
+  max-width: 100%;
+  padding: 30px 50px;
+  text-align: center;
+  font-size: 24px;
+}
+
+#title,
+#author {
+  border-radius: 5px;
+  height: 3vh;
+  width: 15vw;
+  margin: 1vh;
+  font-size: 18px;
+}
+
+#read,
+#pages {
+  border-radius: 5px;
+  height: 2vh;
+  width: 3vw;
+  margin: 1vh;
+}
